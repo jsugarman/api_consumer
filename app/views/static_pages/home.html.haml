@@ -1,0 +1,8 @@
+%h1 Example JSON consumer - Gem details queried from ruby gems
+
+%p 
+ specify a gem name and hit search
+%p 
+= form_tag({:controller => "static_pages", :action => "gem_details"}, method: "get") do
+ = text_field_tag("gem_name")
+ = submit_tag("Search")

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+root  'static_pages#home'
+
+# resource :static_pages, only: [:show]
+match '/gem_details',    to: 'static_pages#gem_details',    via: 'get'
+# match '/remote_gem',    to: 'static_pages#remote_gem',    via: 'post'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
